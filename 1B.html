@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Admin Dashboard</title>
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+/* Remove sidebar */
+body {
+font-family: Arial, sans-serif;
+background-color: #dacccc;
+margin: 0;
+padding: 0;
+}
+.container-fluid {
+max-width: 800px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0px 0px 10px 0px rgba(66, 131, 93, 0.7);
+}
+h2{
+color: rgb(76, 177, 180);
+text-align: center;
+font-weight: bolder;
+text-shadow: 2px 1px 2px rgb(56, 86, 87);
+}
+.sidebar {
+display: none;
+}
+/* Decrease form size */
+.content {
+padding: 20px;
+max-width: 600px; /* Adjust the maximum width as needed */
+margin: 0 auto; /* Center the form horizontally */
+}
+.form-group {
+margin-bottom: 20px; /* Increase or decrease the spacing between form fields */
+}
+.btn-primary {
+background-color: #095a4d;
+border-color: #2f3f3c;
+margin-top: 15px;
+padding: 8px;
+width: 100%; /* Make the button fill the entire width of its container */
+}
+.btn-primary:hover {
+background-color: #0056b3;
+border-color: #0056b3;
+box-shadow: 10px 10px 10px 0px rgba(48, 54, 50, 0.7);
+}
+.form-control {
+max-width: 800px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 10px 10px 10px 0px rgba(48, 54, 50, 0.7);
+}
+/* .form-control:focus {
+border-color: #80bdff;
+box-shadow: none;
+} */
+label{
+color: #121213;
+font-family:sans-serif;
+font-weight: bolder;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 sidebar bg-dark">
+<ul>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Students</a></li>
+<li><a href="#">Teachers</a></li>
+<li><a href="#">Courses</a></li>
+</ul>
+</div>
+<div class="col-md-10 content">
+<h2>Add Student Information</h2>
+<form id="studentForm">
+<div class="form-group">
+<label for="studentName">Student Name:</label>
+<input type="text" class="form-control" id="studentName" required>
+</div>
+<div class="form-group">
+<label for="studentPhone">Student Phone:</label>
+<input type="text" class="form-control" id="studentPhone" required>
+</div>
+<div class="form-group">
+<label for="studentDOB">Date of Birth:</label>
+<input type="date" class="form-control" id="studentDOB" required>
+</div>
+<div class="form-group">
+<label for="studentGender">Gender:</label><br>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+</div>
+<div class="form-group">
+<label for="studentEmail">Student Email:</label>
+<input type="email" class="form-control" id="studentEmail" required>
+</div>
+<div class="form-group">
+<label for="studentRoll">Student Roll No.:</label>
+<input type="text" class="form-control" id="studentRoll" required>
+</div>
+<div class="form-group">
+<label for="studentRegDate">Registration Date:</label>
+<input type="date" class="form-control" id="studentRegDate" required>
+</div>
+<div class="form-group">
+<label for="studentBranch">Branch:</label>
+<select class="form-control" id="studentBranch" required>
+<option value="">Select Branch</option>
+<option value="CS">Computer Science</option>
+<option value="MECH">Mechanical</option>
+<option value="ELEC">Electrical</option>
+</select>
+</div>
+<div class="form-group">
+<label for="parentName">Parent Name:</label>
+<input type="text" class="form-control" id="parentName" required>
+</div>
+<div class="form-group">
+<label for="parentPhone">Parent Phone No.:</label>
+<input type="text" class="form-control" id="parentPhone" required>
+</div>
+<button type="submit" class="btn-primary">Submit</button>
+</form>
+<div id="studentInfo" class="mt-4"></div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
